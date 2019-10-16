@@ -101,6 +101,7 @@ hr {
 }
 
 .header--fixed {
+    padding: 10px 0;
     background-color: #eb8b8d;
     position: fixed;
     top: 0;
@@ -186,8 +187,8 @@ hr {
     display: none;
 }
 
-.navToggle.active .navToggleItem {
-    background: none;
+.navToggle:focus {
+    outline: 0;
 }
 
 .navToggleItem {
@@ -202,6 +203,10 @@ hr {
     left: 0;
     margin: auto;
     transition: background 0.2s linear;
+}
+
+.navToggle.active .navToggleItem {
+    background: none;
 }
 
 .navToggleItem:before,
@@ -601,10 +606,14 @@ hr {
 /* Reviews */
 
 .reviews {
-    padding: 0 110px;
     position: relative;
 }
+.reviews .slick-slider {
+    padding: 0 110px;
+}
+
 .reviewsItem {
+    min-height: 210px;
     padding-left: 250px;
     position: relative;
 }
@@ -641,16 +650,24 @@ hr {
     background-color: #f38181;
     margin-right: 10px;
 }
-.reviewsButton {
+.slick-arrow {
+    display: block;
     font-size: 0;
     color: transparent;
+    border: 0;
+    cursor: pointer;
+    background: none;
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
 }
 
-.reviewsButton:after {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-arrow:after {
     content: "";
     display: block;
     width: 16px;
@@ -658,11 +675,12 @@ hr {
     border-top: 2px solid #ccc;
     border-left: 2px solid #ccc;
 }
-.reviewsButton--prev {
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
-.reviewsButton--next {
+
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
@@ -1125,6 +1143,8 @@ hr {
     color: #f38181;
 }
 
+/* MEDIA */
+
 @media (max-width: 1230px) {
     /* Intro */
     .introSuptitle {
@@ -1185,7 +1205,7 @@ hr {
         padding-left: 175px;
     }
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0 60px;
     }
 
@@ -1217,7 +1237,7 @@ hr {
     /* Instagrem */
 
     .instagram {
-         justify-content: flex-start;
+        justify-content: flex-start;
     }
 
     .instagramItem {
@@ -1247,6 +1267,10 @@ hr {
         top: 100%;
         left: 0;
         background-color: #eb8b8d;
+    }
+
+    .nav.active {
+        display: block;
     }
     .navLink {
         display: block;
@@ -1413,10 +1437,10 @@ hr {
     }
 
     /* Reviews */
-    .reviews {
+    .reviews .slick-slider {
         padding: 0;
     }
-    .reviewsButton {
+    .slick-arrow {
         top: 18%;
     }
 
@@ -1447,7 +1471,6 @@ hr {
     }
     .clientsItem {
         padding-left: 0;
-        padding-right: 0;
         text-align: center;
     }
 

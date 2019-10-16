@@ -4,29 +4,41 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap" rel="stylesheet">
         <link
-            href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext"
             rel="stylesheet"
-        />
-        <script
-            src="https://kit.fontawesome.com/97842e80f9.js"
+            href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+            integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
             crossorigin="anonymous"
-            crossorigin="anonymous"
-        ></script>
+        >
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        >
+
         <title>Mogo</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header" id="header">
             <div class="container">
                 <div class="headerInner">
                     <div class="headerLogo" data-scroll="#intro">MoGo</div>
 
                     <nav class="nav" id="nav">
-                        <a class="navLink active" href="#">About</a>
-                        <a class="navLink" href="#">Service</a>
-                        <a class="navLink" href="#">Blog</a>
-                        <a class="navLink" href="#">Work</a>
-                        <a class="navLink" href="#">Contact</a>
+                        <a class="navLink" href="#" data-scroll="#about"
+                            >About</a
+                        >
+                        <a class="navLink" href="#" data-scroll="#services"
+                            >Services</a
+                        >
+                        <a class="navLink" href="#" data-scroll="#blog">Blog</a>
+                        <a class="navLink" href="#" data-scroll="#works"
+                            >Work</a
+                        >
+                        <a class="navLink" href="#" data-scroll="#footer"
+                            >Contact</a
+                        >
                         <a class="navLink" href="#">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
@@ -35,7 +47,11 @@
                         </a>
                     </nav>
 
-                    <button class="navToggle" type="button">
+                    <button
+                        class="navToggle active"
+                        id="navToggle"
+                        type="button"
+                    >
                         <span class="navToggleItem">Menu</span></button
                     ><!-- end of navToggle -->
                 </div>
@@ -43,7 +59,7 @@
         </header>
         <div class="page">
             <!-- Intro -->
-            <div class="intro">
+            <div class="intro" id="intro">
                 <div class="container">
                     <div class="introInner">
                         <h2 class="introSuptitle">Creative Template</h2>
@@ -77,8 +93,8 @@
                 </div>
             </div>
             <!-- /.intro -->
-
-            <section class="section">
+            <!-- About -->
+            <section class="section" id="about">
                 <div class="container">
                     <div class="sectionHeader">
                         <h3 class="sectionSuptitle">What we do</h3>
@@ -137,9 +153,9 @@
                     </div>
                     <!-- end of card -->
                 </div>
-                <!-- end of container -->
+                <!-- end of About  -->
             </section>
-
+            <!-- Statistics -->
             <div class="statistics">
                 <div class="container">
                     <div class="stat">
@@ -253,6 +269,7 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Services -->
 
             <!-- Devices -->
             <section class="section  section--devices">
@@ -277,7 +294,9 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Devices -->
 
+            <!-- Wedo -->
             <section class="section">
                 <div class="container">
                     <div class="sectionHeader">
@@ -304,8 +323,11 @@
                             />
                         </div>
                         <div class="weDoItem">
-                            <div class="accordeon">
-                                <div class="accordionItem">
+                            <div class="accordion">
+                                <div
+                                    class="accordionItem"
+                                    data-collapse="#wedo1"
+                                >
                                     <div class="accordionHeader">
                                         <img
                                             class="accordionIcon"
@@ -316,7 +338,7 @@
                                             Photography
                                         </div>
                                     </div>
-                                    <div class="accordionContent">
+                                    <div class="accordionContent" id="wedo1">
                                         <p>
                                             Lorem ipsum dolor sit amet,
                                             consectetur adipisicing elit. Quam
@@ -330,7 +352,10 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="accordionItem active">
+                                <div
+                                    class="accordionItem active"
+                                    data-collapse="#wedo2"
+                                >
                                     <div class="accordionHeader">
                                         <img
                                             class="accordionIcon"
@@ -341,7 +366,7 @@
                                             Creativity
                                         </div>
                                     </div>
-                                    <div class="accordionContent">
+                                    <div class="accordionContent" id="wedo2">
                                         <p>
                                             Lorem ipsum dolor sit amet,
                                             consectetur adipisicing elit. Quam
@@ -355,7 +380,10 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="accordionItem">
+                                <div
+                                    class="accordionItem"
+                                    data-collapse="#wedo3"
+                                >
                                     <div class="accordionHeader">
                                         <img
                                             class="accordionIcon"
@@ -366,7 +394,7 @@
                                             Web Design
                                         </div>
                                     </div>
-                                    <div class="accordionContent">
+                                    <div class="accordionContent" id="wedo3">
                                         <p>
                                             Lorem ipsum dolor sit amet,
                                             consectetur adipisicing elit. Quam
@@ -389,36 +417,57 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Wedo -->
 
+            <!-- Reviews 1 -->
             <div class="section section--grey">
                 <div class="container">
                     <div class="reviews">
-                        <a class="reviewsButton reviewsButton--prev" href="#"
-                            >Prev</a
-                        >
-                        <a class="reviewsButton reviewsButton--next" href="#"
-                            >Next</a
-                        >
-                        <div class="reviewsItem">
-                            <img
-                                class="reviewsPhoto"
-                                src="img/avatar.png"
-                                alt="Picture of man from behind"
-                            />
-                            <div class="reviewsText">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Accusamus, nostrum. Commodi,
-                                vel minima, facere omnis voluptatum porro fugit
-                                quas iste dolorem, quos modi voluptas nisi.
+                        <div data-slider>
+                            <div>
+                                <div class="reviewsItem">
+                                    <img
+                                        class="reviewsPhoto"
+                                        src="img/avatar.png"
+                                        alt="Picture of man from behind"
+                                    />
+                                    <div class="reviewsText">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Accusamus, nostrum.
+                                        Commodi, vel minima, facere omnis
+                                        voluptatum porro fugit quas iste
+                                        dolorem, quos modi voluptas nisi.
+                                    </div>
+                                    <div class="reviewsAuthor">John Doe</div>
+                                </div>
                             </div>
-                            <div class="reviewsAuthor">John Doe</div>
+
+                            <div>
+                                <div class="reviewsItem">
+                                    <img
+                                        class="reviewsPhoto"
+                                        src="img/avatar.png"
+                                        alt="Picture of man from behind"
+                                    />
+                                    <div class="reviewsText">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Accusamus, nostrum.
+                                        Commodi, vel minima, facere omnis
+                                        voluptatum porro fugit quas iste
+                                        dolorem, quos modi voluptas nisi.
+                                    </div>
+                                    <div class="reviewsAuthor">John Doe</div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- end of slider -->
                     </div>
                 </div>
                 <!-- end of container -->
             </div>
-            <!-- end of reviews -->
+            <!-- end of reviews 1 -->
 
+            <!-- Team -->
             <section class="section">
                 <div class="container">
                     <div class="sectionHeader">
@@ -584,7 +633,9 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Team -->
 
+            <!-- Logos -->
             <div class="section section--grey">
                 <div class="container">
                     <div class="logos">
@@ -636,7 +687,8 @@
             </div>
             <!-- end of logos-->
 
-            <section class="section">
+            <!-- Works -->
+            <section class="section" id="works">
                 <div class="container">
                     <div class="sectionHeader">
                         <h3 class="sectionSuptitle">What we do</h3>
@@ -771,36 +823,55 @@
                 </div>
                 <!-- end of works -->
             </section>
+            <!-- End of Works -->
 
+            <!-- Reviews 2 -->
             <div class="section ">
                 <div class="container">
                     <div class="reviews">
-                        <a class="reviewsButton reviewsButton--prev" href="#"
-                            >Prev</a
-                        >
-                        <a class="reviewsButton reviewsButton--next" href="#"
-                            >Next</a
-                        >
-                        <div class="reviewsItem">
-                            <img
-                                class="reviewsPhoto"
-                                src="img/avatar.png"
-                                alt="Picture of man from behind"
-                            />
-                            <div class="reviewsText">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Accusamus, nostrum. Commodi,
-                                vel minima, facere omnis voluptatum porro fugit
-                                quas iste dolorem, quos modi voluptas nisi.
+                        <div data-slider>
+                            <div>
+                                <div class="reviewsItem">
+                                    <img
+                                        class="reviewsPhoto"
+                                        src="img/avatar.png"
+                                        alt="Picture of man from behind"
+                                    />
+                                    <div class="reviewsText">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Accusamus, nostrum.
+                                        Commodi, vel minima, facere omnis
+                                        voluptatum porro fugit quas iste
+                                        dolorem, quos modi voluptas nisi.
+                                    </div>
+                                    <div class="reviewsAuthor">John Doe</div>
+                                </div>
                             </div>
-                            <div class="reviewsAuthor">John Doe</div>
+                            <div>
+                                <div class="reviewsItem">
+                                    <img
+                                        class="reviewsPhoto"
+                                        src="img/avatar.png"
+                                        alt="Picture of man from behind"
+                                    />
+                                    <div class="reviewsText">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Accusamus, nostrum.
+                                        Commodi, vel minima, facere omnis
+                                        voluptatum porro fugit quas iste
+                                        dolorem, quos modi voluptas nisi.
+                                    </div>
+                                    <div class="reviewsAuthor">John Doe</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- end of container -->
             </div>
-            <!-- end of reviews -->
+            <!-- end of reviews 2-->
 
+            <!-- Clients -->
             <section class="section section--clients">
                 <div class="container">
                     <div class="sectionHeader">
@@ -881,8 +952,10 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!--End of  Clients -->
 
-            <section class="section">
+            <!-- Clients -->
+            <section class="section" id="blog">
                 <div class="container">
                     <div class="sectionHeader">
                         <h3 class="sectionSuptitle">Our Stories</h3>
@@ -1000,7 +1073,9 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Clients -->
 
+            <!-- Map -->
             <section class="section section--map">
                 <div class="container">
                     <div class="map">
@@ -1016,8 +1091,10 @@
                 </div>
                 <!-- end of container -->
             </section>
+            <!-- End of Map -->
 
-            <footer class="footer">
+            <!-- Footer -->
+            <footer class="footer" id="footer">
                 <div class="container">
                     <div class="footerInner">
                         <div class="footerCol footerCol--first">
@@ -1223,7 +1300,20 @@
                 </div>
                 <!-- end of container -->
             </footer>
+            <!-- End of Footer -->
         </div>
         <!-- end of page -->
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+               src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+
+        <script src="js/app.js"></script>
     </body>
 </html>
